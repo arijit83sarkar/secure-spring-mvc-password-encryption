@@ -6,10 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Log In - Spring Security</title>
-<%-- <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/style.css"> --%>
+<title>Sign Up - Spring Security</title>
 <style>
 @import
 	url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap')
@@ -69,8 +66,8 @@ body {
 			<div class="row">
 				<div class="col-lg-6 col-12 mx-auto">
 					<div class="p-5 bg-white rounded shadow-lg">
-						<h3 class="mb-2 text-center">Log In</h3>
-						<p class="text-center lead">Log In to manage your account</p>
+						<h3 class="mb-2 text-center">Sign Up</h3>
+						<p class="text-center lead">Sign up to create an account</p>
 						<form:form
 							action="${pageContext.request.contextPath}/authenticateTheUser"
 							method="POST">
@@ -84,7 +81,7 @@ body {
 
 							<div style="margin-top: 20px; margin-top: 20px">
 								<button type="submit"
-									class="btn btn-primary btn-lg w-100 shadow-lg">LOG IN</button>
+									class="btn btn-primary btn-lg w-100 shadow-lg">CREATE ACCOUNT</button>
 							</div>
 
 							<div style="margin-top: 20px; margin-top: 20px">
@@ -93,24 +90,12 @@ body {
 									<div class="alert alert-danger col-xs-offset-1 col-xs-10">
 										Invalid username and password!</div>
 								</c:if>
-
-								<!-- LOGOUT MESSAGE -->
-								<c:if test="${param.logout != null}">
-									<div class="alert alert-success col-xs-offset-1 col-xs-10">
-										You've been successfully logged out!</div>
-								</c:if>
 							</div>
 						</form:form>
-						<div style="margin-top: 20px; margin-top: 20px">
-							<input type="button" class="btn btn-warning btn-lg w-100 shadow-lg"
-								value="SIGN UP"
-								onclick="window.location.href='signup'; return false;" />
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>
